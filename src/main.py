@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import json
 import io
 import discord
+from discord import app_commands
 from discord.ext import commands
 import random
 import re
@@ -74,9 +75,15 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print(f"Logged in as {bot.user} (ID: {bot.user.id})")
     print("------")
+    try:
+        synced = await bot.tree.sync()
+        print(f"Synced {len(synced)} slash command(s).")
+    except Exception as e:
+        print(f"Failed to sync slash commands: {e}")
+    print("------")
 
 # Hello Command
-@bot.command(name="hello", help="Says hello back to you!")
+@bot.hybrid_command(name="hello", description="Says hello back to you!")
 async def hello(ctx):
     # ctx stands for "context", containing info about who sent the message, the channel, etc.
     await ctx.send(f"Hello, {ctx.author.mention}!")
@@ -106,7 +113,7 @@ async def setwelcome(ctx):
   save_data()
   await ctx.send(f"✅ Welcome channel saved! New members will be greeted here.")
 
-@bot.command(name="ghoul")
+@bot.hybrid_command(name="ghoul", description="checks the count of ghouls")
 async def testembed(ctx):
     # 1. Create the embed object
     embed = discord.Embed(
@@ -122,7 +129,7 @@ async def testembed(ctx):
     embed.set_footer(text="Requested via !ghoul command")
     await ctx.send(embed=embed)
 
-@bot.command(name="oracle", help="Prints a random New York Oracle quote from JSON")
+@bot.hybrid_command(name="oracle", description="Prints a random New York Oracle quote from JSON")
 async def oracle_text(ctx):
     global voicelines_data
     if not voicelines_data:
@@ -170,7 +177,6 @@ async def inspect_ctx(ctx):
       file=file,
   )
 
-
 @bot.event
 async def on_member_join(member):
   """Triggered automatically whenever a new user joins the server."""
@@ -190,7 +196,7 @@ async def on_member_join(member):
           f"Welcome to the server, {member.mention}! 🎉"
       )
 
-@bot.command(name="cf", help="Flips a coin heads or tails")
+@bot.hybrid_command(name="cf", description="Flips a coin heads or tails")
 async def roll(ctx):
   coin = random.randint(1,2)
   if coin == 1:
@@ -199,8 +205,7 @@ async def roll(ctx):
   await ctx.send(f"Rolled tails!")
   return
 
-
-@bot.command(name="roll", help="Rolls dice using notation like !roll 2d20+5")
+@bot.hybrid_command(name="roll", description="Rolls dice using notation like !roll 2d20+5")
 async def roll(ctx, dice_str: str = "1d20"):
   # Clean up input by converting to lowercase and removing spaces
   dice_str = dice_str.lower().replace(" ", "")
