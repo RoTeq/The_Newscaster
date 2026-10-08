@@ -13,11 +13,28 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 
 #JSON
 DATA_FILE = "botdata.json"
+VOICELINES_FILE = "voicelines.json"
+
+default_voicelines = {
+    "quotes": [
+        "Come friends, The New York Oracle isn't just the news. It's a glimpse into the future!",
+        "The New York Oracle! Bringing the future to the streets!",
+        "Read all about it! The city always spins!",
+    ]
+}
+
 default_datafile = {
    "wc": 0,
    "count_channel": None,
    "welcome_channel": None,
 }
+
+# Load Voice Lines from JSON
+def load_voicelines():
+  if os.path.exists(VOICELINES_FILE):
+    with open(VOICELINES_FILE, "r") as f:
+      return json.load(f)
+  return default_voicelines
 
 # load the json file
 def load_data():
@@ -39,6 +56,8 @@ def save_data():
 
 # setup the datafile
 saved_data = load_data()
+voicelines_data = load_voicelines()
+
 THEWORD = "ghoul"
 WC = saved_data.get("wc", 0)
 welcome_channel = saved_data.get("welcome_channel", None)
@@ -101,6 +120,22 @@ async def testembed(ctx):
     embed.add_field(name="Total 'Ghoul' Count", value=f"{WC} times", inline=True)
 
     embed.set_footer(text="Requested via !ghoul command")
+    await ctx.send(embed=embed)
+
+@bot.command(name="oracle", help="Prints a random New York Oracle quote from JSON")
+async def oracle_text(ctx):
+    global voicelines_data
+    if not voicelines_data:
+      await ctx.send("❌ No Oracle quotes found in `voicelines.json`!")
+      return
+
+    quote = random.choice(voicelines_data)
+    embed = discord.Embed(
+        title="📰 The New York Oracle",
+        description=f"*{quote["text"]}*",
+        color=discord.Color.orange(),
+    )
+    embed.set_footer(text="Brought to you by the streets of New York")
     await ctx.send(embed=embed)
 
 # deep debug command

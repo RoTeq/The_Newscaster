@@ -1,0 +1,777 @@
+[
+    {
+        "category": "Seasonal unlock",
+        "text": "Detective Abrams was last seen wearing a Santa hat. Reports that he's looking for eggnog have not been substantiated.",
+        "with": "Abrams"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "In today's human interest story, we'll cover Bebop, the plucky scrap golem in an adorable Santa hat.",
+        "with": "Bebop"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "This just in: Professor Dynamo rang in the holiday season with style.",
+        "with": "Dynamo"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Is Grey Talon looking to give the gift of murder this holiday season? Our sources say yes.",
+        "with": "Grey Talon"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Hoping to soften their image, the OSIC Sandman Division released a holiday calendar this year. It only made them more terrifying.",
+        "with": "Haze"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Our beloved bartender at Jezebel's has traded in his fedora for a Santa hat.",
+        "with": "Infernus"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "The savior of Spanish Harlem continues to melt New York's heart as she dispenses vigilante justice dressed for the holidays.",
+        "with": "Ivy"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Are ice wights secretly servants of Santa? The New York Oracle investigates.",
+        "with": "Kelvin"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Breaking news! Lady Geist has been possessed! Not by Oathkeeper, but by the holiday spirit!",
+        "with": "Lady Geist"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Is Lash the meanest Santa of all time? Read the New York Oracle to find out!",
+        "with": "Lash"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Presumably walking home drunk after a Fairfax industry holiday party, notorious misanthrope Maggie McGinnis has been seen looking festive!",
+        "with": "McGinnis"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Are the Djinn embracing western holidays? Mirage's latest headgear says maybe.",
+        "with": "Mirage"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "A New York City mole man was spotted with a very shiny nose. Could Santa have a new leader for his sleigh team?",
+        "with": "Mo and Krill"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Paradox has seemingly stolen a Santa hat in what appears to be a low-stakes, yet surprisingly meaningful crime.",
+        "with": "Paradox"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "A street urchin in a Santa hat is making waves as they spread holiday cheer throughout New York.",
+        "with": "Pocket"
+    },
+    {
+        "category": "Guide",
+        "text": "Destroying base guardians will strengthen Each Guardian protects its corresponding lane.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Press 1, 2, 3, or 4 to use your hero's abilities.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Hold mouse 2 to zoom in with your weapon.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Press space to jump.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Hold space when near a ledge to mantle up.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Press Q to use your melee attack up close.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Press mouse 1 to shoot. Gun damage falls off at longer ranges.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Hold space to get on the line. You can jump off by pressing space.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Press Q to make a quick attack. Hold Q to deliver a powerful charging attack.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "There are many neutral creatures lurking around the map. Defeat them to earn souls. Sometimes, a powerful creature will appear at the center of the map. Defeating it will offer your team great power.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Spend ability points to upgrade your abilities. Abilities have three upgrade tiers, and you upgrade them in order.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "As you collect souls, you'll also be granted ability points. You can spend these points to upgrade your abilities by holding tab.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Get souls by killing troopers and players. You can also get souls by killing neutrals, located throughout the map. Souls are shared among allies nearby.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Items can modify a variety of things, like ammo count, melee damage, or health regeneration. Items that increase Spirit Power improve the effectiveness of your abilities. There is a suggested items tab with hand-picked recommendations for each hero.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "When you land a killing blow, extra souls appear. You can secure these souls by shooting the green orb containing them or letting them float away.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "When an enemy dies, extra souls appear. You can secure these souls by shooting the blue orb containing them or letting them float away.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "When you have souls to spend, go back to base to heal and buy powerful items that increase your stats and grant additional abilities. There's also a shop next to each Guardian, available until the Guardian is destroyed.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Enemy soul orbs are orange, and enemies will get them if they float away or if they shoot them. You can shoot these orange orbs first to steal them.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "While airborne, Dash to perform an air dash.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "While moving, press left shift to dash.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Combine a dash and a well-timed jump to perform a dash jump.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Press space at the top of a jump to double jump. Special moves like double jump use your stamina bar, located next to your reticle.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Press F to parry an enemy hero's melee attack. They'll be stunned and will receive increased melee damage.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Hold left control to slide while moving down a ramp or moving at high speed.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Your goal is to siege the enemy base and destroy their defenses to reveal their team's patron. Destroy the patron, and victory is yours.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Guardians are the first line of defense in each lane. Their attacks are very powerful, so it's best to push into them with your troopers.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "There are three lanes, each with a transit line that players can ride to move quickly.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Troopers periodically spawn in the base and then run down a lane, fighting any enemies they encounter.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Walkers lie deeper in the lanes and have an arsenal of defensive moves.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Welcome to the Cursed Apple. If your team wants to emerge victorious, you'll need to wield both guns and supernatural powers to lay siege to the enemy base.",
+        "with": "Self"
+    },
+    {
+        "category": "Guide",
+        "text": "Welcome to the Cursed Apple. If your team wants to emerge victorious, you'll need to wield both guns and supernatural power to lay siege to the enemy base.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Come, friends! The New York Oracle isn't just the news, it's a glimpse into the future!",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Come, friends! The New York Oracle isn't just the news, it's a glimpse into the future!",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "What calamities await New York? For five measly pennies, our prognostications can be yours!",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Once an eclipse changed the world. Who knows what today's celestial event will bring.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is Harry Houdini really dead? Recent reports suggest that the legendary magician's final trick was to escape death itself.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The New York Oracle, bringing the future to the present for over 20 years.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is your refrigerator communing with the dead? Buy today's edition of the New York Oracle and find out!",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Today in Science Watch, researchers discover a parallel universe where spirit boards are nothing more than a child's toy.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Extraplanar fashion icon Roshbark exposed as being nothing more than a human using a glamour cantrip! Read about this and more in the New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Are human sacrifices on the rise? Read today's news to find out!",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Who says the future is unwritten? Purchase your copy of the New York Oracle today!",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "This week in the New York Oracle, Warding your house on a budget.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Read our exclusive interview with Professor Dynamo to hear his thoughts on astral gates, the eclipse, and what it's like to live life without a body.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The OSIC has issued a warning to the city of New York, recommending that citizens stay indoors for the duration of the celestial event.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Bunco, party game or ritual component to the Soho Coven? It's a little of both.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The Supreme Court today upheld Sinderma versus the State of Alabama, paving the way for the Spirit's congressional bid. Read all about it in the New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is dating in the 1900s too complicated? These 20-somethings tell all.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "A memoir by Incubus to the Stars, Mikhail Lesan, has spent three weeks on top of our bestsellers list. Learn more about the book that has everyone talking in this week's edition of The New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The Tome of Anubis, once thought lost to the sands of time, was purportedly spotted here in New York's black market. For this story and more, pick up your copy of the New York Oracle today.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Artifacts of the Outer Planes, a new exhibit at the Met, is gearing up to open next month. Read all about it in the New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is New York ready for a new age of mysticism? Only time will tell.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Have love potions ruined dating? See what relationship expert Madame LaPree thinks.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "A tour group disappeared while spending the night in a haunted Chelsea hotel, leaving mediums and police baffled.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "In today's edition of the New York Oracle, we investigate which items in your apartment are most likely to be cursed. You won't believe what we've found.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Police crackdown on black market ritual components has sent shockwaves throughout the Bronx.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "An eight-year-old concert pianist dazzled audiences last night, but was the Long Island native a child prodigy or simply possessed by an 18th-century composer?",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is eating werewolf meat cannibalism? We asked some of New York's elite chefs to get their take on the new dining trend that's taking Paris by storm.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Congress debates possible alchemy restrictions. Read all about it in the New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The Grey Coven leaves audiences spellbound. Read the New York Oracle's review of the latest off-Broadway sensation.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is your local doomsayer insane or secretly a prophet? We ask experts how to spot the difference.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Political firebrand or founder of a new Inquisition? Read our exclusive interview with John Hathorne and decide for yourself.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Are anti-occult sentiments on the rise? The New York Oracle investigates.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Late last night, Nathan Weiss, the center for the Knickerbockers, was found with their legs broken. Reports that it involved a gambling debt to a Madison Avenue curio shop owner have yet to be substantiated.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Rodgers and Hammerstein's latest musical, South Pacific, has become the hottest ticket in town, with some would-be theatergoers selling one-eighth of their souls to scalpers for prime seating.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "In world news, a seventh astral gate has been found in Europe. While dormant, experts wonder if the celestial event could cause it to open. For this story and more, pick up your copy of the New York Oracle today.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "They thought they were making ashtrays, but this first-grade class in Harlem was actually making phylacteries. Read the disturbing tale of art class malfeasance in the New York Oracle today.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Daylight savings time. Is it still needed in the modern world? We speak to Midwest agromancers to get their take.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The Klansky trial has taken a dramatic turn today, as Miserhart took the stand to claim that Erik Klansky's botched exorcism caused the spirit inhumane pain and suffering.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "How young is too young to talk to your children about hexes? The New York Oracle speaks to a child therapist to find out.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "A murder of crows suspected to be the infamous serial killer known as the Troubadour was spotted flying over Champaign-Urbana today. Could he be flying to New York?",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "A necromancer harvesting fear from the Coney Island Cyclone was arrested today. Coney Island officials could not be reached for comment.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "B Line continues to be closed this week. While the mayor has not spoken publicly on the nature of the closure, inside sources suspect it may have something to do with a sewer spirit.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Looking to take your kids to the Bleak Carnival? Pick up your copy of the New York Oracle to find out how to keep your family safe.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "New York natives hoped that magic would help solve the city's rat problems. Sadly, it only made them stronger.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Science catching up to mysticism? It seems impossible, but these metaphysicists aren't giving up.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Djinn Ambassador Nashala Dion has arrived in New York as negotiations continue, but is the U.S. government really okay with selling Wyoming? For this story and more, pick up the New York Oracle today.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "George Frederick Cooke is primed to take the stage once more, but are audiences ready to see a headless ghost as a leading man?",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is Trinity Church an undead time bomb waiting to explode? We talk with premier necromancer Frederick Totten to get his take.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "An attempt on John Hathorne's life has raised security concerns for the controversial speaker's upcoming New York appearance.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Have you been curious about the mysteries of the Black Chateau? For the first time in its August history, the Chateau's doors are being opened to the New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The Occult Security and Investigation Commission has opened a new office in New York. We hit the streets of Manhattan to find out if people feel more safe or more concerned.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The Mendoza syndicate may have been driven out of Spanish Harlem, but is their criminal empire truly gone? We talked to local law enforcement to get their take.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The New York Oracle's own Allie Kincaid sits down with occult magnate Maximilian Fairfax in an exclusive new interview. Read his thoughts on family, the Ixian War, and the future of the supernatural in our world.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Cadence and the Requiem Boy's new single, Paying the Price, has been tearing up the charts, but should parents be concerned about lyrics that some say glorify human sacrifice?",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Next week will mark the five-year anniversary of South Ixia officially joining the United States as its 52nd state. See how folks are planning to celebrate across the country in today's edition of The New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "As the military campaign in Ixia continues, the controversial political organization Friends of Humanity announced a rally in New York to demand the U.S. cease sending aid to the outer planes.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Eldritch Tactical Solutions, a subsidiary of Fairfax Industries, comes under fire as new allegations are made by former employees. Are these soldiers of fortune committing war crimes? The New York Oracle investigates.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Looking at taking a vacation to Ixia? Read the New York Oracle for helpful travel tips to the outer plains.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "We were told that Lost Whisper was impregnable, but is there any truth to the rumor that a dangerous inmate escaped? The New York Oracle investigates.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Airships have made travel faster than ever, but not everyone is comfortable putting their safety in the hands of a zephyr. Are those concerns reasonable, or just misplaced fear?",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The Museum of Modern Art recently announced a special gallery showcasing the work of late German artist Johann Geist.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Anton's fine monkey paws has been temporarily closed after it was discovered that some of their stock was corrupted by a wish twister.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Anton's Fine Monkey Paws has been temporarily closed after it was discovered that some of their stock was corrupted by a wish twister.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Bakers across the country nervously await the Supreme Court's ruling on the legality of selling ensorcelled bagels.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "A Soho cat cafe run by familiars has charmed the community, but to owner's mittens and peppermint, it's just another day making biscuits.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "A local con artist was arrested for trying to sell real estate in the underworld. Read the strange tale of escrow and Armageddon in this week's New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Could your neighbor be a shapeshifter? Read all about the telltale signs of lycanthropy.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The New Jersey Devil continues his reign of mediocre stand-up performances, as the cryptid's latest set receives more jeers than cheers.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The EPA has issued another sanction to Fairfax Industries, citing their improper disposal of spiritual waste was not just an affront to nature, but a threat to it.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The Supreme Court is poised to rule on the Fairfax Fair Tax Bill next session. Will our 50th state remain in the Union, or will Fairfax Industries successfully regain its sovereignty over the island of Cadenza? Only time will tell.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "The international bestseller for queen and coven, highlighting the daring exploits of the queen's own 13th airborne assault coven, is under fire as representatives of the crown claim that some of the operations detailed in the tell-all violate the nation's scrying laws and pose a national security risk.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is the doll in your attic plotting murder, or simply a trapped soul praying for a death that will never come? We talked to local artificers to find out how you can tell the difference.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Is it ethical to put children under a geis? The hot new parenting trend has kids making their bed every morning, but some experts warn that supernatural compulsion could run the risk of hurting long-term relationships between parents and their kids.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Are voodoo dolls acceptable disciplinary tools in high school? A Brooklyn math teacher looking to test the outer bounds of tenure certainly thinks so. Read all about what happens when geometry goes bad in today's New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Headline",
+        "text": "Expecting parents have long kept the names of their babies secret, but now a new OSIC hex report has some families questioning about ever revealing their children's true name. Readers weigh in with their thoughts in today's New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "News reel test",
+        "text": "When summoning the patron, you may hear your allies call out, Let's go mid! Fear not, your teammates aren't having a stroke. They're merely trying to direct you towards the Rejuvenator, a powerful relic that can give you mastery over death itself. But in order to claim the Rejuvenator, you must first defeat a powerful entity that protects it. Kill the entity, punch the Rejuvenator, and fear death no more. For more ritual survival tips, get your copy of the New York Oracle today.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Happy holidays from your friends at the New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Need a gift for someone special? Then get them a box of Twin Omen Cigars! That's Twin Omen Cigars, a proud sponsor of the New York Oracle.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Protecting your family from Krampus! Are gingerbread wards enough?",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "This month, Maximilian Fairfax made headlines after donating a small fortune to New York orphanages. When asked about his generous act, the CEO of Fairfax Industries replied, \"No one should be without family on the holidays.\"",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Rockefeller Center is teeming with skaters as the holiday season is in full swing.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The Yeti of the Yukon Lumberjack Show has thrilled Canadian audiences for years. Will they find the same success as they begin their first U.S. tour this winter?",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The holidays are upon us! If you're naughty, beware.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The OSIC has issued a statement reminding citizens that North Pole expeditions are illegal without a permit.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The Knickerbockers' losing streak continues after a humiliating defeat to the Celtics. In unrelated news, no one likes the Celtics.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Looking to make this holiday season more magical? Curse your enemies!",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The editorial staff at the New York Oracle would like to issue a formal apology for a recent headline that encouraged hexes for the holidays.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "New York anxiously awaits the arrival of Kris Kringle. Have you been a good boy or girl this year?",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The tree is lit, the rockets are kicking, and magic is in the air. It's holiday time in New York!",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "A controversial department store window display left some parents outraged. For more on this story, pick up your copy of the New York Oracle today.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The Ixian War tops this year's list of topics most likely to start a fight at holiday dinners.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The Oracle's own Allie Kincaid teases that her next interview will be electrifying.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Snowmen. Don't mess with them. Just in case.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Planning on going caroling this year? This week's edition of the New York Oracle offers useful tips on how to raise spirits, but not raise spirits.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "This Thursday, Jezebel's Billiard Hall is offering free hot chocolate with every game of pool.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Have you been visited by three ghosts in the middle of the night? If so, we'd love to hear about it.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Officials have confirmed that the calamity at last week's tree lighting festival was a result of a giant rat chewing on a junction box.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The New York Municipal Coven is looking for volunteers to spend time with stray familiars in their Soho shelter.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Cadence and the Requiem Boys holiday show sold out in record time. Will the Ixian singer add a second date? Only time will tell.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "The New York Oracle wants to wish you and your loved ones a safe Maelstrom and a joyous winter.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "Santa, wonderful or amazing?",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal headline",
+        "text": "This holiday season, the Oracle would like to remind readers not to be like Jacob Lash.",
+        "with": "Self"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "This just in: the individual known only as Seven has found a way to make the holiday season more terrifying.",
+        "with": "Seven"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "A handsome son of a bitch in a Santa hat has been seen throwing knives in Midtown. Could it be Shiv? Yes, yes, it's Shiv.",
+        "with": "Shiv"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Is Vindicta executing individuals with alarming frequency? Yes. Are people strangely okay with it because she's dressed as a murderous elf? Absolutely.",
+        "with": "Vindicta"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "New York has been charmed by a pile of goo that embodies the holiday season.",
+        "with": "Viscous"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Once Warden was dressed as a cop. Now he's dressed as a cop with a Santa hat. What will he look like next? The New York Oracle digs into this ever-evolving and seemingly unending mystery.",
+        "with": "Warden"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Is Wraith wearing a Santa hat because she lost a bet, or is she full of holiday cheer?",
+        "with": "Wraith"
+    },
+    {
+        "category": "Seasonal unlock",
+        "text": "Breaking news! Yamato was seen wearing a Santa hat. Somehow this makes her scarier than normal.",
+        "with": "Yamato"
+    }
+]
