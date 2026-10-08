@@ -155,6 +155,16 @@ async def on_member_join(member):
           f"Welcome to the server, {member.mention}! 🎉"
       )
 
+@bot.command(name="cf", help="Flips a coin heads or tails")
+async def roll(ctx):
+  coin = random.randint(1,2)
+  if coin == 1:
+    await ctx.send(f"Rolled heads!")
+    return
+  await ctx.send(f"Rolled tails!")
+  return
+
+
 @bot.command(name="roll", help="Rolls dice using notation like !roll 2d20+5")
 async def roll(ctx, dice_str: str = "1d20"):
   # Clean up input by converting to lowercase and removing spaces
