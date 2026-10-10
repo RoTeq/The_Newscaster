@@ -1,0 +1,103 @@
+# Ghoulcount file with the information for the ghoulcount subprogram
+
+###############################
+######## Imports ##############
+###############################
+
+import discord
+from discord import app_commands
+from discord.ext import commands
+import re
+from sqlite_inter import oracleDB
+
+###############################
+######## Load Env #############
+###############################
+
+THEWORD = "ghoul"
+
+###############################
+###### Ghoul Cog  #############
+###############################
+
+class GhoulCog(commands.Cog):
+    def __init__(self, bot):
+       self.bot = bot
+       self.db = oracleDB("resources/oracle.db")
+
+
+    # embed count check
+    @commands.hybrid_command(name="ghoul", description="checks the count of ghouls")
+    async def ghoul(self, ctx):
+
+        count = self.db.get_global_stat("ghoul_count",0)
+
+        # Create the embed object
+        embed = discord.Embed(
+            title="Ghoul Count!",
+            description="Citizens of the Cursed apple here is the current ghoul count!",
+            color=discord.Color.green()
+        )
+
+
+        # Add fields (Name, Value, inline True/False)
+        embed.add_field(name="Total 'Ghoul' Count", value=f"{count} times", inline=True)
+        embed.set_footer(text="Requested via !ghoul command")
+        await ctx.send(embed=embed)
+
+    @app_commands.command(name="set_ghoul_count", description="set the ghoul count channel")
+    @app_commands.checks.has_permissions(administrator=True)
+    async def set_ghoul_count(self, interaction: discord.Interaction):
+        count_channel = interaction.channel.id
+        self.db.upsert_global("count_channel",count_channel)
+        await interaction.response.send_message(
+          f"✅ Notification channel saved! I will send updates for **'{THEWORD}'**"
+          " here.",
+          ephemeral=True
+        )
+
+    # listener for ghoul
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        if message.author.bot or not message.guild or message.content.startswith("!"):
+            return
+        pattern = re.compile(r"ghoul", re.IGNORECASE) # create regex
+
+
+        if pattern.search(message.content):
+            current = int(self.db.get_global_stat("ghoul_count","0"))
+            new_count = current + 1
+            self.db.upsert_global("ghoul_count", str(new_count))
+            self.db.upsert_user(message.author.id, message.author.display_name, ghoul_increment=1)
+            notif_channel = self.bot.get_channel(int(self.db.get_global_stat("count_channel")))
+            if notif_channel:
+                # Send the notification to the other channel
+                await notif_channel.send(
+                    f"📈 **'{THEWORD}'** has now been said **{new_count}** times!"
+                )
+
+        await self.bot.process_commands(message) # backwards compatibility
+
+    #check for command errors
+    async def cog_app_command_error(
+        self,
+        interaction: discord.Interaction,
+        error: app_commands.AppCommandError,
+    ):
+      if isinstance(error, app_commands.MissingPermissions):
+        await interaction.response.send_message(
+            "❌ You do not have the required permissions (Administrator) to run"
+            " this command.",
+            ephemeral=True,
+        )
+      elif isinstance(error, app_commands.CheckFailure):
+        await interaction.response.send_message(
+            "❌ You are not authorized to use this command.", ephemeral=True
+        )
+      else:
+        # Let other unexpected errors bubble up normally
+        raise error
+            
+
+async def setup(bot):
+    await bot.add_cog(GhoulCog(bot))

@@ -218,4 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# custom
 botdata.json
+test/
