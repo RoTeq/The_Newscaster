@@ -71,6 +71,8 @@ async def on_ready():
     print("✅ Loaded Ghoul cog!")
     await bot.load_extension("cogs.roleplay")
     print("✅ Loaded Roleplay cog!")
+    await bot.load_extension("cogs.masterlist")
+    print("✅ Loaded Masterlist cog!")
 
     # Load Slash Commands
     try:
