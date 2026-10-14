@@ -56,6 +56,16 @@ class GhoulCog(commands.Cog):
           ephemeral=True
         )
 
+    @app_commands.command(name="ghoul_leaderboard", description="set the ghoul count channel")
+    @app_commands.checks.has_permissions(administrator=True)
+    async def ghoul_leaderboard(self, interaction: discord.Interaction):
+        top_ghouls = self.db.get_top_ghouls(limit=10)
+        embed = discord.Embed(title="👻 Ghoul Counter", color=discord.Color.blue())
+        for ghoul in top_ghouls:
+            embed.add_field(name="Expression", value=f"`{ghoul}`", inline=False)
+        embed.set_footer(text= "Brought to you by the streets of New York!")
+        await interaction.send(embed=embed)
+
     # listener for ghoul
     @commands.Cog.listener()
     async def on_message(self, message):
