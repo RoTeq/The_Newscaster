@@ -61,8 +61,10 @@ class GhoulCog(commands.Cog):
     async def ghoul_leaderboard(self, interaction: discord.Interaction):
         top_ghouls = self.db.get_top_ghouls(limit=10)
         embed = discord.Embed(title="👻 Ghoul Counter", color=discord.Color.blue())
+        i = 1
         for ghoul in top_ghouls:
-            embed.add_field(name="Expression", value=f"`{ghoul}`", inline=False)
+            embed.add_field(name=F"Ghouler #{i}", value=f"`{ghoul}`", inline=False)
+            i+= 1
         embed.set_footer(text= "Brought to you by the streets of New York!")
         await interaction.response.send_message(embed=embed)
 
