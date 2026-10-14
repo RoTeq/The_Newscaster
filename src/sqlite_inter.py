@@ -75,7 +75,7 @@ class oracleDB():
             FROM users 
             ORDER BY ghoul_count DESC 
             LIMIT ?
-        """,(limit))
+        """,(limit,))
 
         return self.cursor.fetchall()
 
