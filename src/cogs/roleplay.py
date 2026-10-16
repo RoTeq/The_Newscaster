@@ -87,5 +87,7 @@ class RpCog(commands.Cog):
 
         await ctx.send(embed=embed)
 
+    # @commands.hybrid_command(name=)
+
 async def setup(bot):
     await bot.add_cog(RpCog(bot))

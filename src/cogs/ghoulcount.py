@@ -28,21 +28,37 @@ class GhoulCog(commands.Cog):
 
     # embed count check
     @commands.hybrid_command(name="ghoul", description="checks the count of ghouls")
-    async def ghoul(self, ctx):
+    @app_commands.choices(server=[
+        app_commands.Choice(name="Server", value="server"),
+        app_commands.Choice(name="Me", value="me")
+    ])
+    async def ghoul(self, ctx, server:str="server"):
 
-        count = self.db.get_global_stat("ghoul_count",0)
+        match server:
+            case "server":
+                count = self.db.get_global_stat("ghoul_count",0)
+                embed = discord.Embed(
+                    title="Ghoul Count!",
+                    description="Citizens of the Cursed Apple here is the current ghoul count!",
+                    color=discord.Color.green()
+                )
+                # Add fields (Name, Value, inline True/False)
+                embed.add_field(name="Total 'Ghoul' Count", value=f"{count} times", inline=True)
+                embed.set_footer(text="Requested via !ghoul command")
+            case "me":
+                count = self.db.get_user_stat(ctx.author.id)
+                embed = discord.Embed(
+                    title="Ghoul Count!",
+                    description="Citizen of the Cursed Apple here is your current ghoul count!",
+                    color=discord.Color.green()
+                )
+                # Add fields (Name, Value, inline True/False)
+                embed.add_field(name="Total 'Ghoul' Count", value=f"{count[1]} times", inline=True)
+                embed.set_footer(text="Requested via !ghoul command")
+
 
         # Create the embed object
-        embed = discord.Embed(
-            title="Ghoul Count!",
-            description="Citizens of the Cursed apple here is the current ghoul count!",
-            color=discord.Color.green()
-        )
-
-
-        # Add fields (Name, Value, inline True/False)
-        embed.add_field(name="Total 'Ghoul' Count", value=f"{count} times", inline=True)
-        embed.set_footer(text="Requested via !ghoul command")
+        
         await ctx.send(embed=embed)
 
     @app_commands.command(name="set_ghoul_count", description="set the ghoul count channel")
