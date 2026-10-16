@@ -62,7 +62,7 @@ class GhoulCog(commands.Cog):
         embed = discord.Embed(title="👻 Ghoul Leaderboard", color=discord.Color.blue())
         i = 1
         for ghoul in top_ghouls:
-            embed.add_field(name=F"Ghouler #{i}", value=f"{ghoul[0]} count: {ghoul[1]}", inline=False)
+            embed.add_field(name=F"Ghouler #{i}", value=f"{ghoul[0]}  | `{ghoul[1]}`", inline=False)
             i+= 1
         embed.set_footer(text= "Brought to you by the streets of New York!")
         await interaction.response.send_message(embed=embed)
