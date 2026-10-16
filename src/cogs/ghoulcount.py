@@ -58,7 +58,6 @@ class GhoulCog(commands.Cog):
 
 
         # Create the embed object
-        
         await ctx.send(embed=embed)
 
     @app_commands.command(name="set_ghoul_count", description="set the ghoul count channel")
