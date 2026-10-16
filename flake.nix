@@ -14,10 +14,11 @@
     in {
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
-          packages = with pkgs; [
-            (python3.withPackages (python-pkgs: with python-pkgs; [
+          buildInputs = [
+            (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
               discordpy
-              
+              python-dotenv
+              requests
             ]))
           ];
         };

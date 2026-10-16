@@ -28,9 +28,18 @@ class GhoulCog(commands.Cog):
 
     # embed count check
     @commands.hybrid_command(name="ghoul", description="checks the count of ghouls")
-    async def ghoul(self, ctx):
+    @app_commands.choices(server=[
+        app_commands.Choice(name="Server", value="server"),
+        app_commands.Choice(name="Me", value="me")
+    ])
+    async def ghoul(self, ctx, server:str="server"):
 
-        count = self.db.get_global_stat("ghoul_count",0)
+        match server:
+            case "server":
+                count = self.db.get_global_stat("ghoul_count",0)
+            case "me":
+                count = self.db.get_user_stat(ctx.author.id)
+
 
         # Create the embed object
         embed = discord.Embed(
