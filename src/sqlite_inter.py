@@ -79,6 +79,15 @@ class oracleDB():
 
         return self.cursor.fetchall()
 
+    def get_user_stat(self, user:int):
+        self.cursor.execute("""
+            SELECT username, ghoul_count
+            FROM users
+            WHERE user_id = ?
+        """,(user,))
+        row = self.cursor.fetchall()
+        return row[0] if row else None
+
     def get_global_stat(self, key: str, default=None):
         """Fetches a value from global_stats based on the provided key."""
 
