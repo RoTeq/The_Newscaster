@@ -37,21 +37,28 @@ class GhoulCog(commands.Cog):
         match server:
             case "server":
                 count = self.db.get_global_stat("ghoul_count",0)
+                embed = discord.Embed(
+                    title="Ghoul Count!",
+                    description="Citizens of the Cursed Apple here is the current ghoul count!",
+                    color=discord.Color.green()
+                )
+                # Add fields (Name, Value, inline True/False)
+                embed.add_field(name="Total 'Ghoul' Count", value=f"{count} times", inline=True)
+                embed.set_footer(text="Requested via !ghoul command")
             case "me":
                 count = self.db.get_user_stat(ctx.author.id)
+                embed = discord.Embed(
+                    title="Ghoul Count!",
+                    description="Citizen of the Cursed Apple here is your current ghoul count!",
+                    color=discord.Color.green()
+                )
+                # Add fields (Name, Value, inline True/False)
+                embed.add_field(name="Total 'Ghoul' Count", value=f"{count[1]} times", inline=True)
+                embed.set_footer(text="Requested via !ghoul command")
 
 
         # Create the embed object
-        embed = discord.Embed(
-            title="Ghoul Count!",
-            description="Citizens of the Cursed apple here is the current ghoul count!",
-            color=discord.Color.green()
-        )
-
-
-        # Add fields (Name, Value, inline True/False)
-        embed.add_field(name="Total 'Ghoul' Count", value=f"{count} times", inline=True)
-        embed.set_footer(text="Requested via !ghoul command")
+        
         await ctx.send(embed=embed)
 
     @app_commands.command(name="set_ghoul_count", description="set the ghoul count channel")

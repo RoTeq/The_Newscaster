@@ -85,7 +85,7 @@ class oracleDB():
             FROM users
             WHERE user_id = ?
         """,(user,))
-        row = self.cursor.fetchone()
+        row = self.cursor.fetchall()
         return row[0] if row else None
 
     def get_global_stat(self, key: str, default=None):
