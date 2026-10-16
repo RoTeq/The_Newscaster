@@ -78,10 +78,11 @@ class GhoulCog(commands.Cog):
         if pattern.search(message.content):
             current = int(self.db.get_global_stat("ghoul_count","0"))
             new_count = current + 1
+            hundred = True if (new_count % 100) == 0 else False # get the modulo to check 100s
             self.db.upsert_global("ghoul_count", str(new_count))
             self.db.upsert_user(message.author.id, message.author.display_name, ghoul_increment=1)
             notif_channel = self.bot.get_channel(int(self.db.get_global_stat("count_channel")))
-            if notif_channel:
+            if notif_channel and hundred:
                 # Send the notification to the other channel
                 await notif_channel.send(
                     f"📈 **'{THEWORD}'** has now been said **{new_count}** times!"
