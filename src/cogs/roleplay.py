@@ -120,7 +120,7 @@ class RpCog(commands.Cog):
         )
     async def register_char(self, ctx, character:str, sheet:str):
        await ctx.send("Not Implemented, Sorry!")
-       pass
+       return
 
     @app_commands.command(name="skill_check", description="Registers a character using the google sheet with the stats on it")
     @app_commands.describe(
@@ -134,7 +134,7 @@ class RpCog(commands.Cog):
     )
     async def skill_check(self, ctx, character:str, skill:str,):
         await ctx.send("Not Implemented, Sorry!")
-        pass
+        return
         sheet_id = self.db.get_character_sheet(ctx.author.id, character)
         URL = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&range=C3:C26"
         response = requests.get(URL)
