@@ -118,8 +118,8 @@ class RpCog(commands.Cog):
             character="The character id you want to register",
             sheet="the google sheet with your characters stats on it"
         )
-    async def register_char(self, ctx, character:str, sheet:str):
-       await ctx.send("Not Implemented, Sorry!")
+    async def register_char(self, interaction:discord.Interaction, character:str, sheet:str):
+       await interaction.response.send_message("Not Implemented, Sorry!")
        return
 
     @app_commands.command(name="skill_check", description="Registers a character using the google sheet with the stats on it")
@@ -132,8 +132,8 @@ class RpCog(commands.Cog):
             app_commands.Choice(name="Logic", value="logic")
         ]
     )
-    async def skill_check(self, ctx, character:str, skill:str,):
-        await ctx.send("Not Implemented, Sorry!")
+    async def skill_check(self, interaction:discord.Interaction, character:str, skill:str,):
+        await interaction.response.send_message("Not Implemented, Sorry!")
         return
         sheet_id = self.db.get_character_sheet(ctx.author.id, character)
         URL = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&range=C3:C26"
