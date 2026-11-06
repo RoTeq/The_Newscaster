@@ -32,9 +32,9 @@ class GhoulCog(commands.Cog):
         app_commands.Choice(name="Server", value="server"),
         app_commands.Choice(name="Me", value="me")
     ])
-    async def ghoul(self, ctx, server:str="server"):
+    async def ghoul(self, ctx, ghoul_count:str="server"):
 
-        match server:
+        match ghoul_count:
             case "server":
                 count = self.db.get_global_stat("ghoul_count",0)
                 embed = discord.Embed(
