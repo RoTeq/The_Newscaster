@@ -97,5 +97,31 @@ async def taxes(ctx):
 
     await ctx.send(embed=embed)
 
+@bot.hybrid_command(name="hello", description="says hello to a new member for you with a premade message")
+async def hello(ctx, member:discord.Member):
+
+    REACTION_ROLE = 1555757604570013819
+    FAQ = 1560810605676335104
+    TICKETS = 1555757604570013822
+    STAFF_ASSISTANCE = 1555757604570013821
+    CHARACTER_DISCUSSION = 1555757606042075280
+    RESERVES_AND_DROPS = 1555757605845213297
+    TTRPG_RULES = 1559695240758038588
+    SUBMISSION_TEMPLATE = 1558949825498845226
+
+    embed = discord.Embed(
+        title=f"Hello {member.display_name}!",
+        description=f"""
+        Welcome in! Here's a guide for everything:
+Head over to <#{REACTION_ROLE}> for your roles and if you have any questions go check <#{FAQ}> before asking. If you need staff assistance feel free to go open a <#{TICKETS}> if it's a more serious issue or <#{STAFF_ASSISTANCE}> if it's something more minor. 
+
+If you need help with making a character, go  to <#{CHARACTER_DISCUSSION}> and ping a creative helper. If you wanna reserve a canon character (which you must be here for at least 3 days to avoid people joining, grabbing a canon character immediately then going silent), go to <#{RESERVES_AND_DROPS}>. If you wanna know about our TTRPG system (which is mostly optional outside of events), go to <#{TTRPG_RULES}>. Templates for character docs are here in <#{SUBMISSION_TEMPLATE}>!
+        """,
+        color=discord.Color.green()
+    )
+    await ctx.send(content=f"{member.mention}",embed=embed)
+
+
+
 # Run the bot
 bot.run(TOKEN.strip())
