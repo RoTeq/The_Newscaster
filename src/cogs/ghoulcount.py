@@ -28,7 +28,7 @@ class GhoulCog(commands.Cog):
 
     # embed count check
     @commands.hybrid_command(name="ghoul", description="checks the count of ghouls")
-    @app_commands.choices(server=[
+    @app_commands.choices(ghoul_count=[
         app_commands.Choice(name="Server", value="server"),
         app_commands.Choice(name="Me", value="me")
     ])

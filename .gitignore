@@ -224,3 +224,4 @@ __marimo__/
 botdata.json
 test/
 resources/oracle.db
+flake.lock

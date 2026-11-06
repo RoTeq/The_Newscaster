@@ -5,10 +5,36 @@ from discord import app_commands
 from discord.ext import commands
 import random
 import re
+import requests
+from sqlite_inter import oracleDB
+import csv
+import io
+
+def dice_roll(dice:str)->tuple[list[int],int]:
+    pattern = r"^(\d*)d(\d+)([+-]\d+)?$"
+    match = re.match(pattern, dice)
+
+    count_str, sides_str, mod_str = match.groups()
+    
+    # Default to 1 die if count is omitted (e.g., "d20" becomes 1 die)
+    count = int(count_str) if count_str else 1
+    sides = int(sides_str)
+    modifier = int(mod_str) if mod_str else 0
+
+    # Perform the rolls
+    individual_rolls = [random.randint(1, sides) for _ in range(count)]
+    subtotal = sum(individual_rolls)
+    total = subtotal + modifier
+
+    return individual_rolls, total
+
+
+
 
 class RpCog(commands.Cog):
     def __init__(self, bot):
        self.bot = bot
+       self.db = oracleDB("resources/oracle.db")
 
     @commands.hybrid_command(name="cf", description="Flips a coin heads or tails")
     async def cf(self, ctx):
@@ -18,6 +44,8 @@ class RpCog(commands.Cog):
           return
         await ctx.send(f"Rolled tails!")
         return
+
+
 
     @commands.hybrid_command(name="roll", description="Rolls dice using notation like !roll 2d20+5")
     async def roll(self, ctx, dice_str: str = "1d20"):
@@ -57,10 +85,7 @@ class RpCog(commands.Cog):
           await ctx.send("❌ That die has too many sides! Keep it under 10,000.")
           return
 
-        # Perform the rolls
-        individual_rolls = [random.randint(1, sides) for _ in range(count)]
-        subtotal = sum(individual_rolls)
-        total = subtotal + modifier
+        individual_rolls, total =dice_roll(dice_str)
 
         # Format the text for individual rolls (truncate if it gets massive)
         rolls_text = ", ".join(str(r) for r in individual_rolls)
@@ -87,7 +112,45 @@ class RpCog(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    # @commands.hybrid_command(name=)
+    #TODO Finish
+    @app_commands.command(name="register_character", description="Registers a character using the google sheet with the stats on it")
+    @app_commands.describe(
+            character="The character id you want to register",
+            sheet="the google sheet with your characters stats on it"
+        )
+    async def register_char(self, ctx, character:str, sheet:str):
+       await ctx.send("Not Implemented, Sorry!")
+       pass
+
+    @app_commands.command(name="skill_check", description="Registers a character using the google sheet with the stats on it")
+    @app_commands.describe(
+            character="The character id you want to roll with",
+            skill="the skill that you want to check with"
+        )
+    @app_commands.choices(
+        skill=[
+            app_commands.Choice(name="Logic", value="logic")
+        ]
+    )
+    async def skill_check(self, ctx, character:str, skill:str,):
+        await ctx.send("Not Implemented, Sorry!")
+        pass
+        sheet_id = self.db.get_character_sheet(ctx.author.id, character)
+        URL = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&range=C3:C26"
+        response = requests.get(URL)
+        if response.status_code != 200:
+          return None
+
+        # Check sheet content into memory
+        decoded_content = response.content.decode("utf-8")
+        reader = csv.reader(io.StringIO(decoded_content))
+        rows = list(reader)
+        if not rows:
+            ctx.send("Sheet is Empty")
+        
+
+    
+
 
 async def setup(bot):
     await bot.add_cog(RpCog(bot))
