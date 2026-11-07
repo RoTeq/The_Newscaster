@@ -43,7 +43,7 @@ class character():
     self.wiki_link = self.get_sheet_data(self.sheet_id,"I14")[0][0]
     self.current_health = self.get_sheet_data(self.sheet_id,"L3")[0][0]
     self.current_morale = self.get_sheet_data(self.sheet_id,"L4")[0][0]
-    self.char_stats:list[int] = self.get_main_stats()
+    self.char_stats:dict[str,int] = self.get_main_stats()
     self.triggers:dict[str,int] = self.get_triggers()
     self.thoughts:dict[str,int] = self.get_thoughts()
 
@@ -85,7 +85,8 @@ class character():
     rows = self.get_sheet_data(self.sheet_id, "C3:C26")
     for row in rows:
       char_stats.append(int(row[0]))
-    return char_stats
+    out_dict = dict(zip(names,char_stats))
+    return out_dict
 
 class stats(enum.Enum):
   logic = 0
@@ -112,6 +113,33 @@ class stats(enum.Enum):
   savoir_faire = 21
   interfacing = 22
   composure = 23
+
+names = [
+    "Logic",
+    "Encyclopedia",
+    "Rhetoric",
+    "Drama",
+    "Conceptualization",
+    "Visual Calculus",
+    "Volition",
+    "Inland_empire",
+    "Empathy",
+    "Authority",
+    "Esprit De Corps",
+    "Suggestion",
+    "Endurance",
+    "Pain Threshold",
+    "Physical Instrument",
+    "Electrochemistry",
+    "Shivers",
+    "Half Light",
+    "Hand Eye Coordination",
+    "Perception",
+    "Reaction Speed",
+    "Savoir Faire",
+    "Interfacing",
+    "Composure"
+]
 
 class RpCog(commands.Cog):
     def __init__(self, bot):
@@ -194,6 +222,7 @@ class RpCog(commands.Cog):
 
     @app_commands.command(name="display_sheet", description="shows a character sheet from a link")
     async def display_sheet(self, interaction:discord.Integration, sheet_link:str):
+        await interaction.response.defer(ephemeral=False)
         char = character(get_sheet_id_from_url(sheet_link))
         embed = discord.Embed(
             title=f"{char.character_name}",
@@ -205,13 +234,35 @@ class RpCog(commands.Cog):
         embed.add_field(name="Health", value=f"{char.current_health}/3", inline=True)
         embed.add_field(name="Morale", value=f"{char.current_morale}/4", inline=True)
         embed.add_field(name="Version", value=char.sheet_version, inline=True)
-        embed.add_field(name="Stats",value="test: test", inline=True)
-        embed.add_field(name="Triggers",value="test: test", inline=True)
-        embed.add_field(name="Thoughts",value="test: test", inline=True)
+
+        stats_string = ""
+        for key in char.char_stats:
+            if len(char.char_stats) == 0:
+                stats_string == "None"
+                break
+            stats_string += f"{key}: `{char.char_stats[key]}`\n"
+
+        triggers_string = ""
+        for key in char.triggers:
+            if len(char.char_stats) == 0:
+                stats_string == "None"
+                break
+            triggers_string += f"{key}: `{char.triggers[key]}`\n"
+
+        thoughts_string = ""
+        for key in char.thoughts:
+            if len(char.char_stats) == 0:
+                stats_string == "None"
+                break
+            thoughts_string += f"{key}: `{char.thoughts[key]}`\n"
+
+        embed.add_field(name="Stats",value=stats_string, inline=True)
+        embed.add_field(name="Triggers",value=triggers_string, inline=True)
+        embed.add_field(name="Thoughts",value=thoughts_string, inline=True)
         embed.set_footer(
            text=f"Wiki Page: {char.wiki_link}"
         )
-        await interaction.response.send_message(embed=embed)
+        await interaction.followup.send(embed=embed)
 
     #TODO Finish
     @app_commands.command(name="register_character", description="Registers a character using the google sheet with the stats on it")
