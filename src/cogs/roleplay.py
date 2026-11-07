@@ -122,7 +122,7 @@ names = [
     "Conceptualization",
     "Visual Calculus",
     "Volition",
-    "Inland_empire",
+    "Inland Empire",
     "Empathy",
     "Authority",
     "Esprit De Corps",
